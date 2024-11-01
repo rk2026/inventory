@@ -72,21 +72,6 @@ else:
 #stemmapping = files.upload()
 #df = pd.read_csv('TreeLoc.csv')
 
-"""Upload Boundary polygon shape zip"""
-
-
-
-# Replace the file upload code
-uploaded_file = st.file_uploader("Choose a CSV file", type="csv")
-
-if uploaded_file is not None:
-    df = pd.read_csv(uploaded_file)
-    # ... (rest of your code that uses df)
-else:
-    st.write("Please upload cf outer shape zip file.")
-
-cfouter_shp = files.upload()
-
 """Read sppVal.csv table inorder to join dataframe with its species value
 
 # Join the GeoDataFrames based on the 'species' column
